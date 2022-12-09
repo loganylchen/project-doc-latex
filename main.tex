@@ -1,0 +1,120 @@
+\documentclass[12pt,aspectratio=169]{beamer}
+
+% import packages
+\usepackage{fontspec}
+% \usepackage{ctex} % if use Chinese please un-commented these two lines
+% \setCJKmainfont[Path=fonts/]{SmileySans-Oblique} if use Chinese please un-commented these two lines
+\usepackage{hyperref}
+\usepackage{wedn}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
+% other packages
+\usepackage{latexsym,amsmath,multicol,booktabs,calligra}
+\usepackage{graphicx,pstricks,listings,stackengine}
+\usepackage{natbib}
+\usepackage{tikz}
+
+\usetheme{AnnArbor}
+\usecolortheme{beaver}
+
+
+\setbeamertemplate{navigation symbols}{} % hide the navigation symbols
+\setbeamercovered{transparent} 
+\useoutertheme{smoothbars} % header bar
+\setbeamertemplate{itemize item}{$\blacktriangleright$}
+% set the itemize subitem symbol as a triangle
+\setbeamertemplate{itemize subitem}{$\diamond$}
+% set the itemize subsubitem symbol as a circle with a dot
+\setbeamertemplate{itemize subsubitem}{$\odot$}
+\setbeamertemplate{section in toc}[ball]
+
+% set colors 
+\xdefinecolor{cuhkpurple}{RGB}{105,36,107}      % purple in CUHK logo
+\xdefinecolor{cuhkgold}{RGB}{221,165,45}         % gold in CUHK logo
+\xdefinecolor{cuhklightyellow}{RGB}{237,219,174}    % light yellow in CUHK logo
+\xdefinecolor{depred}{RGB}{165,0,38} 
+\xdefinecolor{red}{RGB}{215,48,39} 
+\xdefinecolor{lightred}{RGB}{254,224,230} 
+\xdefinecolor{orange}{RGB}{253,174,97} 
+\xdefinecolor{lightyellow}{RGB}{254,224,139} 
+\xdefinecolor{llllightgreen}{RGB}{229,245,249} 
+\xdefinecolor{llightgreen}{RGB}{166,217,106} 
+\xdefinecolor{lightgreen}{RGB}{102,189,99} 
+\xdefinecolor{green}{RGB}{26,152,80} 
+\xdefinecolor{depgreen}{RGB}{0,104,55} 
+\xdefinecolor{blue}{RGB}{66,139,202}
+\xdefinecolor{grey}{RGB}{240,240,240}
+
+\setbeamercolor{footline}{bg=cuhklightyellow}
+\setbeamercolor{frametitle}{bg=cuhklightyellow,fg=cuhkpurple}
+\setbeamercolor{title}{bg=cuhkpurple,fg=cuhkgold}
+\setbeamerfont{frametitle}{size=\large}
+
+
+
+\setbeamercolor{palette primary}{fg=cuhkpurple,bg=lightgreen!60!white}
+\setbeamercolor{palette secondary}{fg=cuhkpurple,bg=lightgreen!50!white}
+\setbeamercolor{palette tertiary}{fg=cuhkpurple,bg=lightgreen!10!white}
+\setbeamercolor{palette quaternary}{fg=cuhkpurple,bg=lightgreen!10!white}
+\setbeamercolor{titlelike}{parent=palette primary}
+
+%% try
+\setbeamercolor{block title}{bg=blue,fg=white}
+\setbeamercolor{block body}{bg=grey,fg=black}
+\setbeamercolor{block title example}{bg=depgreen,fg=white}
+\setbeamercolor{block body example}{bg=llllightgreen,fg=black}
+\setbeamercolor{block title alerted}{bg=depred,fg=white}
+\setbeamercolor{block body alerted}{bg=lightred,fg=black}
+
+
+\setbeamercolor{fine separation line}{}
+\setbeamercolor{section number projected}{fg=white,bg=blue}
+
+\setbeamercolor{separation line}{}
+\setbeamercolor{sidebar}{bg=cuhkgold}
+\setbeamercolor{sidebar}{parent=palette primary}
+\setbeamercolor{structure}{fg=cuhkpurple}
+
+
+
+% set font
+\renewcommand\bibfont{\tiny}
+\setbeamerfont{section number projected}{size=\large}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%============================================================================
+%
+% Most of time, we don't need to modify the codes above.
+%
+%=============================================================================
+
+\author[Logan]{Yuelong CHEN\inst{1}   [\texttt{yuelong.chen.btr@gmail.com}]}
+\title[Short Title]{I have a very very very very very very very very very very very very very very very very very long title}
+% \subtitle[sub]{Presentation subTitle}
+\institute[SLS,CUHK]{\inst{1}School of Life Science, the Chinese University of Hong Kong}
+\date{\today}
+
+\titlegraphic{\includegraphics[width=0.4\linewidth]{logos/cuhk-logo-horizontal.eps}}
+
+
+\begin{document}
+
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+
+
+\include{Sections/example}
+
+
+
+\end{document}

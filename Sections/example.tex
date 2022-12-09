@@ -1,0 +1,143 @@
+\section{Section1}
+
+\begin{frame}{good to use beamer}
+    \begin{itemize}[<+-| alert@+>]
+        \item everyone knowns \LaTeX{}=
+        \item  Xe\LaTeX{} 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sample frame title}
+This is a text in second frame. 
+For the sake of showing an example.
+
+\begin{itemize}
+ \item<1-> Text visible on slide 1
+ \item<2-> Text visible on slide 2
+ \item<3> Text visible on slide 3
+ \item<4-> Text visible on slide 4
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+ In this slide \pause
+
+ the text will be partially visible \pause
+
+ And finally everything will be there
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Sample frame title}
+
+In this slide, some important text will be
+\alert{highlighted} because it's important.
+Please, don't abuse it.
+
+\begin{block}{Remark}
+Sample text
+\end{block}
+
+\begin{alertblock}{Important theorem}
+Sample text in red box
+\end{alertblock}
+
+\begin{examples}
+Sample text in green box. The title of the block is ``Examples".
+\end{examples}
+\end{frame}
+
+\begin{frame}
+\frametitle{Two-column slide}
+\begin{columns}
+\column{0.5\textwidth}
+This is a text in first column. \cite{mertens_emerging_2015}
+$$E=mc^2$$
+\begin{itemize}
+\item First item
+\item Second item
+\end{itemize}
+
+\column{0.5\textwidth}
+This text will be in the second column\cite{qin_recurrent_2016}
+and on a second thoughts, this is a nice looking
+layout in some cases.
+\end{columns}
+\end{frame}
+
+\section{Codes}
+\begin{frame}[fragile]
+\frametitle{An Algorithm For Finding Prime Numbers.}
+\begin{verbatim}
+int main (void)
+{
+std::vector<bool> is_prime (100, true);
+for (int i = 2; i < 100; i++)
+if (is_prime[i])
+{
+std::cout << i << " ";
+for (int j = i; j < 100; is_prime [j] = false, j+=i);
+}
+return 0;
+}
+\end{verbatim}
+\begin{uncoverenv}<2>
+Note the use of \verb|std::|.
+\end{uncoverenv}
+\end{frame}
+
+
+\begin{frame}[fragile]
+\frametitle{An Algorithm For Finding Primes Numbers.}
+\begin{semiverbatim}
+\uncover<1->{\alert<0>{int main (void)}}
+\uncover<1->{\alert<0>{\{}}
+\uncover<1->{\alert<1>{ \alert<4>{std::}vector<bool> is_prime (100, true);}}
+\uncover<1->{\alert<1>{ for (int i = 2; i < 100; i++)}}
+\uncover<2->{\alert<2>{ if (is_prime[i])}}
+\uncover<2->{\alert<0>{ \{}}
+\uncover<3->{\alert<3>{ \alert<4>{std::}cout << i << " ";}}
+\uncover<3->{\alert<3>{ for (int j = i; j < 100;}}
+\uncover<3->{\alert<3>{ is_prime [j] = false, j+=i);}}
+\uncover<2->{\alert<0>{ \}}}
+\uncover<1->{\alert<0>{ return 0;}}
+\uncover<1->{\alert<0>{\}}}
+\end{semiverbatim}
+\visible<4->{Note the use of \alert{\texttt{std::}}.}
+\end{frame}
+
+
+% \section{References}
+\begin{frame}[allowframebreaks]{References}
+\bibliographystyle{apalike}
+    \bibliography{ref}
+\end{frame}
+
+\section{Acknowledgements}
+\begin{frame}
+    \centering \wedn \Huge \textbf{Thank you \\ All questions and comments are welcome!}
+\end{frame}
+
+\appendix
+
+\section{Appendix I}
+
+
+\begin{frame}
+    
+    This is what an appendix would look like.
+    
+   
+\end{frame}
+
+\section{Appendix II} \label{app2}
+\begin{frame}
+    \begin{block}{Relevant Title}
+    sssss
+    \end{block}
+    
+\end{frame}
