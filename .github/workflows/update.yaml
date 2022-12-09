@@ -1,0 +1,23 @@
+name: testing building LaTeX documents
+on:
+  workflow_dispatch:
+
+
+
+jobs:
+
+  pdf-build:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./
+          root_file: |
+            ./main.tex
+          latexmk_use_xelatex: true
+      - name: Check Files
+        run: |
+          ls -lthR
