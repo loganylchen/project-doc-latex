@@ -4,18 +4,12 @@ on:
     tags:
       - "v*.*.*"
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      
-  article-and-presentaion-build:
+jobs: 
+  article-and-presentaion-release:
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Compile LaTex document
         uses: xu-cheng/latex-action@v2
         with:
