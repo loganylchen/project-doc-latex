@@ -13,6 +13,7 @@ jobs:
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: ./
+          latexmk_shell_escape: true
           extra_fonts: ./fonts/SmileySans-Oblique.ttf
           root_file: |
             ./article.tex
