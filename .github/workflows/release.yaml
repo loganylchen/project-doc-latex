@@ -26,3 +26,5 @@ jobs:
           files: |
             article.pdf
             presentation.pdf
+permissions:
+  contents: write
