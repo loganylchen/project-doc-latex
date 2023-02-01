@@ -1,0 +1,34 @@
+name: Release Documents
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+  article-and-presentaion-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v2
+      - name: Compile LaTex document
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ./
+          root_file: |
+            ./article.tex
+            ./presentation.tex
+          latexmk_use_xelatex: true
+      
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with: 
+          body_path: CHANGELOG.md
+          files: |
+            article.pdf
+            presentation.pdf
